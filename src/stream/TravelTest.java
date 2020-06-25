@@ -11,7 +11,7 @@ public class TravelTest {
 		TravelCustomer customerKim = new TravelCustomer("김유신", 20, 100);
 		TravelCustomer customerHong = new TravelCustomer("홍길동", 31, 50);
 
-		List<TravelCustomer> customerList = new ArrayList();
+		List<TravelCustomer> customerList = new ArrayList<>();
 		customerList.add(customerLee);
 		customerList.add(customerKim);
 		customerList.add(customerHong);

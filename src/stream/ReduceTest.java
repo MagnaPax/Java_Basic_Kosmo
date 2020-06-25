@@ -22,7 +22,7 @@ public class ReduceTest {
 
 		String[] greetings = { "안녕하세요!", "Hello", "Good morning", "반갑습니다" };
 
-		// BinaryOperator 인터페이스를 구현한 클래스를 사용하는 경우
+		// 매개변수에 람다식을 직접 쓰는 경우
 		System.out.println(Arrays.stream(greetings).reduce(" ", (s1, s2) -> {
 			if (s1.getBytes().length >= s2.getBytes().length)
 				return s1;
@@ -30,7 +30,7 @@ public class ReduceTest {
 				return s2;
 		}));
 
-		// 매개변수에 람다식을 직접 쓰는 경우
+		// BinaryOperator 인터페이스를 구현한 클래스를 사용하는 경우
 		String str = Arrays.stream(greetings).reduce(new CompareString()).get();
 		System.out.println(str);
 	}

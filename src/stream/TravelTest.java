@@ -26,6 +26,19 @@ public class TravelTest {
 		System.out.println("\n== 20세 이상 고객 명단을 정렬하여 출력 ==");
 		customerList.stream().filter(c -> c.getAge() >= 20).map(c -> c.getName()).sorted()
 				.forEach(s -> System.out.println(s));
+		/*
+		
+		stream() ==> 스트림 새로생성
+		
+		-=-=중간 연산=-=- 
+		filter() ==> getAge() 통해 가져온 값을 'c'에 저장
+		map()	==> 이름 가져와서 'c'에 저장
+		sorted()==> 정렬
+		
+		-=-=최종 연산=-=-
+		forEach()==> 요소를 하나씩 꺼내와서 's'에 저장 
+		
+		 */
 
 	}
 
